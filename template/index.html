@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ken-te-vi</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="assets/img/bird 1.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+  <div class="container">
+    <header class="cabecalho">
+      <div class="cabecalho-versao-mobile">
+        <section class="cabecalho-topo">
+          <a href="#">
+            <img src="assets/img/ProfilePic.png" alt="Foto de perfil">
+          </a>
+            
+          <figure>
+            <img src="assets/img/bird 1.svg" alt="Logo Ken-Te-Vi">
+            <figcaption>Logo Ken-Te-Vi</figcaption>
+          </figure>
+        </section>
+        
+        <nav class="cabecalho-menu-base">
+          <a href="#" class="cabecalho-menu-item">
+            <img src="assets/img/Home.png" alt="Icon Página Inicial">
+          </a>
+          <a href="#" class="cabecalho-menu-item">
+            <img src="assets/img/Hashtag.png" alt="Icon Explorar">
+          </a>
+          <a href="#" class="cabecalho-menu-item">
+            <img src="assets/img/Notification.png" alt="Icon Notificações"> 
+          </a>
+          <a href="#" class="cabecalho-menu-item">
+            <img src="assets/img/Group.png" alt="Icon Mensagens">
+          </a>
+        </nav>
+      </div>
+      
+      <div class="cabecalho-versao-desktop">
+        <figure class="cabecalho-logo">
+          <img src="assets/img/bird 1.svg" alt="Logo Ken-Te-Vi">
+          <figcaption hidden>Logo Ken-Te-Vi</figcaption>
+        </figure>
+
+        <nav class="cabecalho-menu-lado">
+          <div class="cabecalho-menu-item">
+            <a href="#">
+              <img src="assets/img/Home.png" alt="Icon Página Inicial">
+              <span>Página Inicial</span>
+            </a>
+          </div>
+          <div class="cabecalho-menu-item">
+            <a href="#">
+              <img src="assets/img/Hashtag.png" alt="Icon Explorar">
+              <span>Explorar</span>
+            </a>
+          </div>
+          <div class="cabecalho-menu-item">
+            <a href="#">
+              <img src="assets/img/Notification.png" alt="Icon Notificações">
+              <span>Notificações</span>
+            </a>
+          </div>
+          <div class="cabecalho-menu-item">
+            <a href="#">
+              <img src="assets/img/Group.png" alt="Icon Mensagens">
+              <span>Mensagens</span>
+            </a>
+          </div>
+          <div class="cabecalho-menu-item">
+            <a href="">
+              <img src="assets/img/Group (1).png" alt="Icon Itens salvos">
+              <span>Itens salvos</span>
+            </a>
+          </div>
+          <div class="cabecalho-menu-item">
+            <a href="#">
+              <img src="assets/img/Group (2).png" alt="Icon Listas">
+              <span>Listas</span>
+            </a>
+          </div>
+          <div class="cabecalho-menu-item">
+            <a href="#">
+              <img src="assets/img/ProfilePic.png" alt="Icon Perfil">
+              <span>Perfil</span>
+            </a>
+          </div>
+          <div class="cabecalho-menu-item">
+            <a href="#">
+              <img src="assets/img/Group (3).png" alt="Icon Mais">
+              <span>Mais</span>
+            </a>
+          </div>
+          <!--<div class="cabecalho-menu-item">
+            <a href="#">
+              <i class="uil uil-pen"></i>
+              <span>Tweetar</span>
+            </a>
+          </div>-->
+        </nav>
+      </div>
+    </header>
+  
+    <main class="conteudo">
+      <div class="conteudo-versao-mobile">
+        <button class="btn-popup" onClick="btnAbre()">
+          <i class="uil uil-pen"></i>
+        </button>
+
+        <div id="bg-popup">
+          <form action="#" class="conteudo-formulario" id="form-tweet-mobile" style="display: none;">
+            <i class="uil uil-times" onclick="fecharPopup()"></i>
+            <textarea name="textoTweet" id="textarea-tweet-mobile" placeholder="O que está acontecendo?" onkeyup="btnAtivo(event)"></textarea>
+            <button type="submit" id="btn-tweetar-mobile" onclick="btnTweetar(event)">Tweetar</button>
+          </form>
+        </div>
+    
+        <section class="conteudo-feed" id="conteudo-feed-mobile">
+          <div class="conteudo-tweet">
+            <div class="tweet-perfil">
+              <img src="assets/img/ProfilePic.png" alt="Foto de perfil">
+            </div>
+            <div class="tweet-info">
+              <h2>Daniel</h2>
+              <span>@danielkenzie 14s</span>
+              <p>MAIS DE 1 MILHÃO DE VAGAS! Lorem ipsum dolor sit amet. Eum iste exercitationem et esse impedit ex veritatis ipsum qui optio perferendis qui quia galisum. #Vagas</p>
+            </div>
+          </div>
+    
+          <div class="conteudo-tweet">
+            <div class="tweet-perfil">
+              <img src="assets/img/ProfilePic.png" alt="Foto de perfil">
+            </div>
+            <div class="tweet-info">
+              <h2>Daniel</h2>
+              <span>@danielkenzie 14s</span>
+              <p>MAIS DE 1 MILHÃO DE VAGAS! Lorem ipsum dolor sit amet. Eum iste exercitationem et esse impedit ex veritatis ipsum qui optio perferendis qui quia galisum. #Vagas</p>
+            </div>
+          </div>
+    
+          <div class="conteudo-tweet">
+            <div class="tweet-perfil">
+              <img src="assets/img/ProfilePic.png" alt="Foto de perfil">
+            </div>
+            <div class="tweet-info">
+              <h2>Daniel</h2>
+              <span>@danielkenzie 14s</span>
+              <img src="https://cdn.pixabay.com/photo/2023/02/13/18/00/bird-7787970__340.jpg" alt="Imagem de pássaro no feed">
+            </div>
+          </div>
+  
+        </section>
+      </div>
+
+      <div class="conteudo-versao-desktop">
+        <div class="conteudo-titulo">
+          <h3>Página Inicial</h3>
+        </div>
+    
+        <form action="#" class="conteudo-formulario">
+          <textarea name="textoTweet" id="textarea-tweet-desktop" placeholder="O que está acontecendo?" onkeyup="btnAtivo(event)"></textarea>
+          <button type="submit" id="btn-tweetar-desktop" onclick="btnTweetar(event)">Tweetar</button>
+        </form>
+    
+        <section class="conteudo-feed" id="conteudo-feed-desktop">
+          <div class="conteudo-tweet">
+            <div class="tweet-perfil">
+              <img src="assets/img/ProfilePic.png" alt="Foto de perfil">
+            </div>
+            <div class="tweet-info">
+              <h2>Daniel</h2>
+              <span>@danielkenzie 14s</span>
+              <p>MAIS DE 1 MILHÃO DE VAGAS! Lorem ipsum dolor sit amet. Eum iste exercitationem et esse impedit ex veritatis ipsum qui optio perferendis qui quia galisum. #Vagas</p>
+            </div>
+          </div>
+    
+          <div class="conteudo-tweet">
+            <div class="tweet-perfil">
+              <img src="assets/img/ProfilePic.png" alt="Foto de perfil">
+            </div>
+            <div class="tweet-info">
+              <h2>Daniel</h2>
+              <span>@danielkenzie 14s</span>
+              <p>MAIS DE 1 MILHÃO DE VAGAS! Lorem ipsum dolor sit amet. Eum iste exercitationem et esse impedit ex veritatis ipsum qui optio perferendis qui quia galisum.</p>
+            </div>
+          </div>
+
+          <div class="conteudo-tweet">
+            <div class="tweet-perfil">
+              <img src="assets/img/ProfilePic.png" alt="Foto de perfil">
+            </div>
+            <div class="tweet-info">
+              <h2>Daniel</h2>
+              <span>@danielkenzie 14s</span>
+              <img src="https://cdn.pixabay.com/photo/2023/02/13/18/00/bird-7787970__340.jpg" alt="Imagem de pássaro no feed">
+            </div>
+          </div>
+        
+        </section>
+      </div>
+    </main>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
