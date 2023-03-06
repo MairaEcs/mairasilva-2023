@@ -219,17 +219,22 @@ img {
     padding: 1rem 0.5rem;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: var(--background-color-light);
     transition: .3s;
     border-top: 1px solid var(--border-color);
   }
   .cabecalho-menu-base a {
-    padding: 2%;
-    height: 2.5rem;
+    padding: 0.5rem;
+    width: 2.625rem;
+    height: 2.625rem;
   }
   .cabecalho-menu-base a:hover {
     background-color: var(--hover-color);
     border-radius: 50%;
+  }
+  .cabecalho-menu-base a:nth-child(4) {
+    padding: 0.6rem;
   }
   
 
@@ -361,13 +366,18 @@ img {
     background-color: var(--hover-color);
     border-radius: 55px;
   }
+  .cabecalho-menu-item figure {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+  }
   .cabecalho-menu-item img {
     max-width: 1.625rem;
   }
   .cabecalho-menu-item a {
     padding: 3% 0;
     display: flex;
-    align-items: end;
+    align-items: center;
   }
   .cabecalho-menu-item span {
     margin: 0 1rem;

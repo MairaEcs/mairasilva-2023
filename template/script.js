@@ -1,13 +1,14 @@
-const body = document.querySelector("body");
+const body = document.querySelector('body');
 
 /*==================== MOBILE ====================*/
 const formM = document.getElementById('form-tweet-mobile');
 const textareatM = document.getElementById('textarea-tweet-mobile');
 const bgPopup = document.getElementById('bg-popup');
 
-//const btnTweetar = document.getElementById('btn-tweetar-mobile');
-//const textoTweetD = document.getElementById('textarea-tweet-desktop');
-//const btnTweetarD = document.getElementById('btn-tweetar-desktop');
+let scroll;
+window.addEventListener('scroll', () => {
+  scroll = document.documentElement.scrollTop;
+});
 
 function btnAtivo(event) {
   let targetId = event.target.id;
@@ -33,7 +34,11 @@ function btnAbre() {
 
     bgPopup.classList.add("ativo");
     body.style.overflow = "hidden";
-    body.style.marginRight = '17px';
+
+    document.documentElement.scrollTop = document.body.scrollTop = scroll;
+
+    /*body.style.marginRight = '17px';
+    body.style.marginRight = '0px';*/
   } else {
     formM.style.display = "none";
   }
@@ -44,11 +49,15 @@ function fecharPopup() {
   bgPopup.classList.remove("ativo");
   
   body.style.overflow = "auto";
-  body.style.marginRight = '0px';
+  /*body.style.marginRight = '0px';*/
+
+  document.documentElement.scrollTop = document.body.scrollTop = 0;
 }
 
 function btnTweetar(event) {
   event.preventDefault();
+
+  document.documentElement.scrollTop = document.body.scrollTop = 0;
   
   let targetId = event.target.id;
   let data, hora, min, conteudoTweet;
