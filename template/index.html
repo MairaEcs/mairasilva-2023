@@ -9,7 +9,7 @@
   <link rel="shortcut icon" href="assets/img/bird 1.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
-<body>
+<body class="claro">
   <div class="container">
     <header class="cabecalho">
       <div class="cabecalho-versao-mobile">
@@ -89,18 +89,17 @@
               <span>Perfil</span>
             </a>
           </div>
-          <div class="cabecalho-menu-item">
-            <a href="#">
-              <figure><img src="assets/img/Group (3).png" alt="Icon Mais"></figure>
-              <span>Mais</span>
-            </a>
+          <div class="cabecalho-menu-item" id="mais" onclick="abrirTema()"> 
+            <!--<a href="#">-->
+            <figure><img src="assets/img/Group (3).png" alt="Icon Mais"></figure>
+            <span>Mais</span>
+            <!--</a>-->
           </div>
-          <!--<div class="cabecalho-menu-item">
-            <a href="#">
-              <i class="uil uil-pen"></i>
-              <span>Tweetar</span>
-            </a>
-          </div>-->
+          <div class="mais-tema" onclick="mudarTema(event)">
+            <span id="tema-claro">Claro <div class="circulo c-claro"></div></span>
+            <span id="tema-escuro">Escuro <div class="circulo c-escuro"></div></span>
+            <span id="tema-azul">Azul <div class="circulo c-azul"></div></span>
+          </div>
         </nav>
       </div>
     </header>
@@ -112,7 +111,7 @@
         </button>
 
         <div id="bg-popup">
-          <form action="#" class="conteudo-formulario" id="form-tweet-mobile" style="display: none;">
+          <form action="#" class="conteudo-formulario formulario-popup" id="form-tweet-mobile" style="display: none;">
             <i class="uil uil-times" onclick="fecharPopup()"></i>
             <textarea name="textoTweet" id="textarea-tweet-mobile" placeholder="O que está acontecendo?" onkeyup="btnAtivo(event)"></textarea>
             <button type="submit" id="btn-tweetar-mobile" onclick="btnTweetar(event)">Tweetar</button>
@@ -127,7 +126,7 @@
             <div class="tweet-info">
               <h2>Daniel</h2>
               <span>@danielkenzie 14s</span>
-              <p>MAIS DE 1 MILHÃO DE VAGAS! Lorem ipsum dolor sit amet. Eum iste exercitationem et esse impedit ex veritatis ipsum qui optio perferendis qui quia galisum. #Vagas</p>
+              <p>MAIS DE 1 MILHÃO DE VAGAS! Lorem ipsum dolor sit amet. Eum iste exercitationem et esse impedit ex veritatis ipsum qui optio perferendis qui quia galisum.</p>
             </div>
           </div>
     
@@ -174,7 +173,7 @@
             <div class="tweet-info">
               <h2>Daniel</h2>
               <span>@danielkenzie 14s</span>
-              <p>MAIS DE 1 MILHÃO DE VAGAS! Lorem ipsum dolor sit amet. Eum iste exercitationem et esse impedit ex veritatis ipsum qui optio perferendis qui quia galisum. #Vagas</p>
+              <p>MAIS DE 1 MILHÃO DE VAGAS! Lorem ipsum dolor sit amet. Eum iste exercitationem et esse impedit ex veritatis ipsum qui optio perferendis qui quia galisum.</p>
             </div>
           </div>
     

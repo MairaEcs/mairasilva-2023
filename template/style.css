@@ -4,19 +4,13 @@
   /*========== Cores ==========*/
   --first-color: rgb(29 155 240);
 
-  --background-color-light: rgb(255, 255, 255);
-  --background-color-blue: rgb(22, 35, 44);
-  --background-color-dark: rgb(0, 0, 0);
-
   --text-color: rgb(0, 0, 0);
   --text-color-light: rgb(255, 255, 255);
 
-  --border-color: rgb(231, 236, 240);
+  --border-color: #e7ecf0;
 
   --btn-disable-color: rgba(29, 155, 240, 0.502);
   --btn-enable-color: rgb(29 155 240);
-
-  --hover-color: #f2f2f2;
 
   /*========== Fonte/Tipografia ==========*/
   --body-font: 'Roboto', sans-serif;
@@ -37,9 +31,40 @@
   line-height: 1.25rem;
 }
 
+/*==================== TEMAS ====================*/
+
+.claro {
+  --background-color: rgb(255, 255, 255);
+  --text-color: rgb(0, 0, 0);
+  --hover-color: #f2f2f2;
+  --text-tweet-color: #0F1419;
+  --background-cabecalho: rgba(255, 255, 255, 0.65);
+  --background-popup: rgba(0, 0, 0, 0.4);
+  --shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+}
+
+.escuro {
+  --background-color: rgb(0, 0, 0);
+  --text-color: rgb(255, 255, 255);
+  --hover-color: #1a1a1a;
+  --background-cabecalho: rgba(0, 0, 0, 0.65);
+  --background-popup: rgb(60 60 60 / 40%);
+  --text-tweet-color: #e7e9ea;
+  --border-color: #191a1a;
+  --shadow: 2px 0px 8px 4px rgb(255 255 255 / 15%);
+}
+
+.azul {
+  --background-color: rgb(22, 35, 44);
+  --text-color: rgb(255, 255, 255);
+  --border-color: #253540;
+  --hover-color: #223644;
+  --shadow: 2px 0px 8px 4px rgb(117 184 231 / 15%);
+}
+
 body {
   font-family: var(--body-font);
-  background-color: var(--background-color-light);
+  background-color: var(--background-color);
   color: var(--text-color);
 }
 
@@ -70,6 +95,50 @@ img {
   display: none;
 }
 
+.mais-tema {
+  position: absolute;
+  background-color: var(--background-color);
+  width: 5rem;
+  height: 5rem;
+  padding: 10%;
+  bottom: 10rem;
+  left: 5.5rem;
+  border-left: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  border-radius: 0 1rem 1rem 0;
+  display: none;
+}
+
+.mais-tema span {
+  cursor: pointer;
+  display: flex;
+}
+
+.mais-tema span:hover {
+  background-color: var(--hover-color);
+  border-radius: 10px;
+}
+
+.circulo {
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 0 0 3px #f1f1f1;
+  margin-left: 7px;
+  margin-top: 4px;
+}
+
+.c-claro{
+  background-color: rgb(255, 255, 255);
+}
+.c-escuro{
+  background-color: rgb(0, 0, 0);
+}
+.c-azul{
+  background-color: rgb(22, 35, 44);
+}
+
 /*==================== CONTEUDO ====================*/
 
 .conteudo {
@@ -85,7 +154,7 @@ img {
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  background-color: rgb(255 255 255 / 65%);
+  background-color: var(--background-cabecalho);
 }
 .conteudo-titulo h3 {
   margin-top: 5vh;
@@ -94,7 +163,7 @@ img {
 }
 
 .conteudo-formulario {
-  padding: 10px 30px;
+  padding: 30px 30px 10px;
   border-bottom: 10px solid var(--border-color);
   text-align: right;
 }
@@ -105,10 +174,12 @@ img {
   outline: none;
   resize: none;
   height: 55px;
-  font-size: 1.25em;
+  font-size: 1.25rem;
+  background-color: var(--background-color);
+  color: var(--text-tweet-color);
 }
 .conteudo-formulario textarea::placeholder {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 .conteudo-formulario button {
   background-color: var(--btn-disable-color);
@@ -154,7 +225,7 @@ img {
 }
 .tweet-info p {
   margin-top: 0.625rem;
-  color: #0F1419;
+  color: var(--text-tweet-color);
 }
 .tweet-info img {
   border-radius: 1rem;
@@ -220,7 +291,7 @@ img {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--background-color-light);
+    background-color: var(--background-color);
     transition: .3s;
     border-top: 1px solid var(--border-color);
   }
@@ -244,7 +315,7 @@ img {
   }
 
   .conteudo-formulario {
-    background-color: var(--background-color-light);
+    background-color: var(--background-color);
     padding: 15px 30px;
     margin: 1rem;
     height: 50vh;
@@ -255,9 +326,13 @@ img {
   }
   .conteudo-formulario i {
     cursor: pointer;
-    padding: 1%;
     font-size: 1.5rem;
     color: rgb(15, 20, 25);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
   }
   .conteudo-formulario i:hover {
     background-color: var(--hover-color);
@@ -266,11 +341,11 @@ img {
   .conteudo-formulario textarea {
     height: 30vh;
     border-bottom: 1px solid var(--border-color);
-    margin: 5% 0;
+    margin: 1rem 0;
   }
 
   #bg-popup.ativo {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: var(--background-popup);
     height: 100%;
     width: 100%;
     position: fixed;
@@ -281,10 +356,10 @@ img {
 }
 
 @media screen and (min-width: 481px) and (max-width: 1023px) {
-  .cabecalho-versao-mobile, .conteudo-versao-mobile {
+  .cabecalho-versao-mobile, #conteudo-feed-mobile {
     display: none;
   }
-
+  /*.conteudo-versao-mobile*/
 
   .cabecalho {
     width: 5.5rem;
@@ -327,11 +402,70 @@ img {
     flex-basis: 70%;
     margin-left: 5.5rem;
   }
+
+  .formulario-popup {
+    background-color: var(--background-color);
+    padding: 15px 30px;
+    margin: 1rem;
+    height: 50vh;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 16px;
+    border-bottom: none;
+  }
+
+  .formulario-popup i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-tweet-color);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+  }
+  .formulario-popup i:hover {
+    background-color: var(--hover-color);
+    border-radius: 50%;
+  }
+  .formulario-popup textarea {
+    height: 30vh;
+    border-bottom: 1px solid var(--border-color);
+    margin: 1rem 0;
+  }
+
+  #bg-popup.ativo {
+    background-color: var(--background-popup);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .btn-popup {
+    left: 17px;
+    /* right: 0; */
+    /* margin-right: 1rem; */
+  }
+
+  .mais-tema {
+    padding: 10% 0 5% 5%;
+    bottom: 8rem;
+    left: 4rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0 1rem 1rem 1rem;
+    height: 5rem;
+  }
   
 }
 
 @media screen and (min-width: 1024px) {
-  .cabecalho-versao-mobile, .conteudo-versao-mobile {
+  .cabecalho-versao-mobile, #conteudo-feed-mobile {
     display: none;
   }
 
@@ -384,10 +518,81 @@ img {
     font-size: 1.25em;
   }
 
+  .mais-tema {
+    padding: 5%;
+    bottom: 9rem;
+    left: 14rem;
+  }
+
   
   .conteudo {
     flex-basis: 60%;
     margin-left: 14rem;
   }
   
+  .formulario-popup {
+    background-color: var(--background-color);
+    padding: 15px 30px;
+    margin: 1rem;
+    height: 50vh;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 16px;
+    border-bottom: none;
+  }
+
+  .formulario-popup i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: rgb(15, 20, 25);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+  }
+  .formulario-popup i:hover {
+    background-color: var(--hover-color);
+    border-radius: 50%;
+  }
+  .formulario-popup textarea {
+    height: 30vh;
+    border-bottom: 1px solid var(--border-color);
+    margin: 1rem 0;
+  }
+
+  #bg-popup.ativo {
+    background-color: var(--background-popup);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .btn-popup {
+    left: 60px;
+    /* right: 0; */
+    /* margin-right: 1rem; */
+    width: 10.5rem;
+    height: 2.5rem;
+    border-radius: 20px;
+    /* right: 0; */
+    /* margin-right: 1rem; */
+  }
+
+  .mais-tema {
+    padding: 5% 36% 5% 5%;
+    bottom: 8rem;
+    left: 3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0 1rem 1rem 1rem;
+    width: 11rem;
+    height: 5rem;
+  }
+
 }
